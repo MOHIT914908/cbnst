@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+
+ double ea,er,ep,x,y;
+ 
+ x=1.7643923;
+ y=1.7643;
+ 
+ ea=fabs(x-y);
+ printf("absolute error is %lf\n ",ea);
+ 
+ er=ea/x;
+ printf("relative error is %lf\n",er);
+ 
+ ep=er*100;
+ printf("percentage error is %lf\n",ep);
+  
+ }
