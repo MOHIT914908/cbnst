@@ -1,0 +1,38 @@
+#include<stdio.h> 
+double fun(double x)
+{
+return (x*x*x)-(4*x)-9;
+}
+
+double find(float a,float b){
+return (a*fun(a)-b*fun(b))/(fun(a)-fun(b));
+
+
+int main(){
+float a=2.0,b=3.0,c;int s=100;
+/*printf("enter the values of a,b ");
+scanf("%f %f ",&a,&b);
+prinf("enter the number of steps");
+scanf("%d",&s);*/
+if(fun(a)*fun(b)<=0){
+int it=1;
+do{
+c=find(a,b);
+if(fun(a)*fun(c)>0){
+a=c;
+}
+else if(fun(a)*fun(b)<0){
+b=c;
+}
+it++;
+printf("value of first  %d is %lf\n",it,(c));
+}while(it<=s);
+}
+
+else{
+printf("error");
+}
+
+printf("final value is %lf ",c);
+return 0;
+}
