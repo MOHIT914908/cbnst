@@ -1,0 +1,36 @@
+//wrie a program in c to nfind a root pof any polynomial equation upto transitional step  using bisection method.
+#include<stdio.h> 
+double fun(double x)
+{
+return (x*x*x)-(4*x)-9;
+}
+
+int main()
+{
+float a=2.0,b=3.0,c;int s=17;
+/*printf("enter the values of a,b ");
+scanf("%d %d ",&a,&b);
+printf("enter the number of steps");
+scanf("%d",&s);*/
+if(fun(a)*fun(b)<=0){
+int it=1;
+do{
+c=(a+b)/2;
+
+if(fun(a)*fun(c)>0){
+a=c;
+}
+else if(fun(a)*fun(b)<0){
+b=c;
+}
+it++;
+printf("value of first  %d is %lf\n",it,(c));
+}while(it<=s);
+}
+else{
+printf("error");
+}
+printf("final value is %lf ",c);
+
+return 0;
+}
