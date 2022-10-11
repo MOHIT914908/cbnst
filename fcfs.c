@@ -38,12 +38,13 @@ int main(){
  sum+=arr[i].bt+arr[i].at-sum;
  }
  else{
- sum+=arr[i].bt;}
+ sum+=arr[i].bt;
+ }
  arr[i].ct=sum;
  arr[i].tat=arr[i].ct-arr[i].at;
  arr[i].wt=arr[i].tat-arr[i].bt;
- 
  }
+ 
  for(int i=0;i<n;i++)
  {
  for(int j=0;j<n-1;j++)
